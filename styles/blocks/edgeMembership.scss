@@ -1,0 +1,60 @@
+.edgeMembership {
+    height: 1153px;
+    background: violet;
+
+    .mainMembership {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 873px;
+        background: cadetblue;
+
+        .membershipHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 127px;
+            background: chocolate;
+
+            .membershipHeaderText {
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 36px;
+                color: $davysGrey;
+            }
+        }
+
+        .membershipList {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+            flex-basis: 484px;
+            background: bisque;
+
+            .membershipItem {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 373px;
+                height: 202px;
+                background: darkgreen;
+
+                .membershipItemImg {
+                    flex-basis: 108px;
+                    background: salmon;
+                }
+
+                .membershipItemContent {
+                    flex: 1;
+                    background: brown;
+                }
+            }
+        }
+
+        .membershipBtn {
+            flex-basis: 62px;
+            background: hotpink;
+        }
+    }
+}

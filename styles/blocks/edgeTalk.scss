@@ -1,0 +1,250 @@
+.edgeTalk {
+    position: relative;
+    background: #fff;
+    height: 1375px;
+    color: $black;
+
+    @include tablet {
+        height: 1300px;
+    }
+
+    @include tablet510 {
+        height: 1200px;
+    }
+
+    @include phones {
+        height: 1500px;
+    }
+
+    // &::after {
+    //     position: absolute;
+    //     content: "";
+    //     background-image: url(./assets/images/talkUp.png);
+    //     width: 100px;
+    //     height: 100px;
+    //     background-size: 100px 100px;
+    //     top: -50px;
+    //     left: 630px;
+    // }
+
+    // &::before {
+    //     position: absolute;
+    //     content: "";
+    //     background-image: url(./assets/images/talkDown.png);
+    //     width: 100px;
+    //     height: 100px;
+    //     background-size: 100px 100px;
+    //     bottom: -50px;
+    //     left: 630px;
+    // }
+
+    .mainTalk {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1095px;
+
+        @include tablet {
+            height: 1050px;
+        }
+
+        @include phones {
+            height: 1300px;
+        }
+
+        .talkHeader {
+            margin: 0 185px;
+            text-align: center;
+
+            @include tablet {
+                font-size: 45px;
+                line-height: 60px;
+                margin: 0 100px;
+            }
+
+            @include tablet510 {
+                font-size: 40px;
+                line-height: 55px;
+                margin: 0 50px;
+            }
+
+            @include phones {
+                font-size: 25px;
+                line-height: 35px;
+                margin: 0;
+            }
+        }
+        .talkBody {
+            display: flex;
+            justify-content: space-between;
+            height: 367px;
+
+            @include phones {
+                height: 735px;
+                flex-direction: column;
+            }
+
+            .talkBodyItem {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-basis: 472px;
+
+                @include tablet {
+                    margin-right: 25px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+
+                @include phones {
+                    justify-content: space-around;
+                    flex-basis: 350px;
+                    margin: 0;
+                }
+
+                .talkBodyMindImg {
+                    height: 275px;
+                    text-align: center;
+
+                    img {
+
+                        @include tablet510 {
+                            height: auto;
+                            max-width: 100%;
+                            width: 275px;
+                        }
+                    }
+                }
+
+                .talkBodyMindText {
+                    text-align: center;
+
+                    .talkBodyMindTextContent {
+                        color: $black;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 25px;
+
+                        @include tablet510 {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+
+                        @include phones {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .talkBodyLight {
+                flex-basis: 472px;
+            }
+        }
+        .talkQuote {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 366px;
+            background: $champagne;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url(./assets/images/star4.png);
+                width: 100px;
+                height: 100px;
+                background-size: 100px 100px;
+                top: -35px;
+                right: -35px;
+
+                @include tablet510 {
+                    width: 75px;
+                    height: 75px;
+                    background-size: 75px 75px;
+                    top: -25px;
+                    right: -25px;
+                }
+
+                @include phones {
+                    display: none;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                background-image: url(./assets/images/vector4.png);
+                width: 100px;
+                height: 100px;
+                background-size: 100px 100px;
+                bottom: 45px;
+                left: -45px;
+
+                @include tablet510 {
+                    width: 75px;
+                    height: 75px;
+                    background-size: 75px 75px;
+                    bottom: 45px;
+                    left: -30px;
+                }
+
+                @include phones {
+                    display: none;
+                }
+            }
+
+            .talkQuoteImg {
+                max-width: 48px;
+            }
+
+            .talkQuoteText {
+                font-size: 35px;
+                font-weight: 700;
+                line-height: 50px;
+                text-align: center;
+                color: $black;
+                margin: 0 240px;
+
+                @include tablet {
+                    margin: 0 140px;
+                }
+
+                @include tablet510 {
+                    font-size: 25px;
+                    margin: 0 50px;
+                }
+
+                @include phones {
+                    font-size: 20px;
+                    margin: 0 15px;
+                }
+            }
+
+            .talkQuoteSpotify {
+                display: flex;
+                align-items: center;
+
+                @include phones {
+                    flex-direction: column-reverse;
+                }
+
+                .talkQuoteSpotifyImg {
+                    margin-right: 10px;
+                }
+
+                .talkQuoteSpotifyText {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    margin-right: 10px;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
