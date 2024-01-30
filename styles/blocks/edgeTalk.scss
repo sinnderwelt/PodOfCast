@@ -1,6 +1,6 @@
 .edgeTalk {
     position: relative;
-    background: #fff;
+    background: $white;
     height: 1375px;
     color: $black;
 
@@ -57,20 +57,14 @@
             text-align: center;
 
             @include tablet {
-                font-size: 45px;
-                line-height: 60px;
                 margin: 0 100px;
             }
-
+        
             @include tablet510 {
-                font-size: 40px;
-                line-height: 55px;
                 margin: 0 50px;
             }
-
+        
             @include phones {
-                font-size: 25px;
-                line-height: 35px;
                 margin: 0;
             }
         }

@@ -1,0 +1,30 @@
+.edgeSponsor {
+    height: 1196px;
+    background: plum;
+
+    .mainSponsor {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 916px;
+        background: violet;
+
+        .sponsorHeader {
+            flex-basis: 127px;
+            background: floralwhite;
+        }
+
+        .sponsorList {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 689px;
+            background: forestgreen;
+
+            .sponsorItem {
+                flex-basis: 373px;
+                background: lightsalmon;
+                height: 100%;
+            }
+        }
+    }
+}

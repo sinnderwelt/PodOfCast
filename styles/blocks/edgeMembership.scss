@@ -1,27 +1,92 @@
 .edgeMembership {
     height: 1153px;
-    background: violet;
+
+    @include phones {
+        height: 1800px;
+    }
 
     .mainMembership {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 873px;
-        background: cadetblue;
+
+        @include phones {
+            height: 1600px;
+        }
 
         .membershipHeader {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             flex-basis: 127px;
-            background: chocolate;
+
+            @include phones {
+                justify-content: space-around;
+            }
+
+            .membershipHeaderBefore {
+
+                position: relative;
+
+                @include phones {
+                    text-align: center;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-image: url(./assets/images/zagagulja.png);
+                    background-size: 195px 92px;
+                    width: 195px;
+                    height: 92px;
+                    top: -65px;
+                    right: -70px;
+
+                    @include tablet {
+                        background-size: 150px 85px;
+                        width: 150px;
+                        height: 85px;
+                        top: -50px;
+                        right: -50px;
+                    }
+
+                    @include tablet510 {
+                        background-size: 130px 65px;
+                        width: 130px;
+                        height: 65px;
+                        top: -40px;
+                        right: -40px;
+                    }
+
+                    @include phones {
+                        display: none;
+                    }
+                }
+            }
 
             .membershipHeaderText {
                 font-size: 22px;
                 font-weight: 500;
                 line-height: 36px;
                 color: $davysGrey;
+
+                @include tablet {
+                    font-size: 18px;
+                }
+
+                @include tablet510 {
+                    font-size: 16px;
+                }
+
+                @include phones {
+                    font-size: 16px;
+                    line-height: 25px;
+                    text-align: center;
+                    margin: 0 55px;
+                }
             }
         }
 
@@ -31,30 +96,87 @@
             align-content: space-between;
             flex-wrap: wrap;
             flex-basis: 484px;
-            background: bisque;
+
+            @include tablet {
+                flex-basis: 645px;
+            }
+
+            @include phones {
+                flex-basis: 1300px;
+            }
 
             .membershipItem {
                 display: flex;
                 flex-direction: column;
-                flex-basis: 373px;
+                flex-basis: calc(33.33% - 20px);
                 height: 202px;
-                background: darkgreen;
+
+                @include tablet {
+                    flex: 0 0 calc(50% - 10px);
+                    // flex-basis: ;
+                }
+
+                @include phones {
+                    flex: 0 0 calc(100%);
+                }
 
                 .membershipItemImg {
                     flex-basis: 108px;
-                    background: salmon;
+                    text-align: center;
                 }
 
                 .membershipItemContent {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    text-align: center;
                     flex: 1;
-                    background: brown;
+
+                    @include tablet {
+                        justify-content: space-around;
+                    }
+
+                    .membershipItemContentText {
+                        
+                        @include tablet {
+                            font-size: 14px;
+                        }
+
+                        @include phones {
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }
 
         .membershipBtn {
+            display: flex;
+            justify-content: center;
+            align-content: center;
             flex-basis: 62px;
-            background: hotpink;
+
+            .membershipButton {
+                padding: 20px 36px;
+                border: 2px solid $black;
+                border-radius: 8px;
+                background: $black;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 22px;
+                color: $white;
+                box-shadow: 6px 6px rgba(#000000, 0.25);
+
+                &:hover {
+                    color: $black;
+                    background: $vermillion;
+                }
+
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,329 @@
+.edgeRecent {
+    position: relative;
+    height: 1456px;
+    background: $champagne;
+
+    @include tablet510 {
+        height: 1996px;
+    }
+
+    @include phones {
+        height: 3328px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 48%;
+        top: -75px;
+        background-image: url(./assets/images/talkDown.png);
+        background-size: 42px 150px;
+        width: 42px;
+        height: 150px;
+
+        @include tablet {
+            top: -55px;
+            background-size: 35px 110px;
+            width: 35px;
+            height: 110px;
+        }
+
+        @include phones {
+            right: 43%;
+        }
+    }
+
+    .mainRecent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1176px;
+
+        @include tablet510 {
+            height: 1760px;
+        }
+
+        @include phones {
+            height: 3136px;
+        }
+
+        .recentHeader {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 127px;
+
+            @include phones {
+                justify-content: space-evenly;
+            }
+
+            .recentHeaderText {
+                font-size: 23px;
+                font-weight: 500;
+                line-height: 36px;
+                color: $davysGrey;
+
+                @include tablet {
+                    font-size: 18px;
+                }
+
+                @include tablet510 {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .recentList {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 787px;
+
+            @include tablet510 {
+                height: 1408px;
+            }
+
+            @include phones {
+                height: 2816px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -105px;
+                right: -80px;
+                background-image: url(./assets/images/recentPalo4ki.png);
+                background-size: 125px 120px;
+                width: 125px;
+                height: 120px;
+
+                @include tablet {
+                    top: -55px;
+                    right: -50px;
+                    background-size: 75px 65px;
+                    width: 75px;
+                    height: 65px;
+                }
+
+                @include tablet510 {
+                    display: none;
+                }
+            }
+
+            .recentItem {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: $white;
+                padding: 16px;
+                height: 249px;
+                flex-basis: calc(50% - 10px);
+                border-radius: 12px;
+                border: 2px $black solid;
+
+                @include tablet510 {
+                    height: 450px;
+                }
+
+                @include phones {
+                    flex-basis: 100%;
+                }
+
+                &:nth-child(1),&:nth-child(4),&:nth-child(5) {
+                    box-shadow: 6px 6px $pewterBlue;
+
+                    @include phones {
+                        box-shadow: none;
+                    }
+                }
+
+                @include phones {
+
+                    &:nth-child(2n+1) {
+                            box-shadow: 6px 6px $pewterBlue;
+                    }
+                }
+
+                .recentItemUpBlock {
+                    display: flex;
+                    height: 166px;
+
+                    @include tablet510 {
+                        flex-direction: column;
+                        height: 466px;
+                    }
+
+                    .recentItemUpBlockImg {
+                        flex-basis: 166px;
+                        border-radius: 8px;
+
+                        @include tablet {
+                            display: flex;
+                            flex-basis: 145px;
+                        }
+
+                        @include tablet510 {
+                            justify-content: center;
+                        }
+
+                        img {
+
+                            @include tablet {
+                                max-width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .recentItemUpBlockText {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        margin-left: 20px;
+                        flex: 1;
+                        margin-left: 20px;
+
+                        @include tablet {
+                            margin-left: 10px;
+                        }
+
+                        @include tablet510 {
+                            margin: 0;
+                        }
+
+                        .recentItemUpBlockTextEps {
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 25px;
+                            color: $vermillion;
+                        }
+
+                        .recentItemUpBlockTextHeaderRed {
+                            color: $vermillion;
+                        }
+
+                        .recentItemUpBlockTextDetails {
+                            border-top: 1px solid $davysGrey;
+                            padding-top: 5px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 22px;
+                            color: $davysGrey;
+
+                            @include tablet {
+                                font-size: 13px;
+                            }
+
+                            @include phones {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+                .recentItemDownBlock {
+                    display: flex;
+                    height: 31px;
+
+                    @include tablet510 {
+                        height: 100px;
+                        flex-direction: column;
+                    }
+
+                    .recentItemDownBlockTagLink {
+                        display: flex;
+                        align-items: center;
+                        flex: 1;
+
+                        @include tablet510 {
+                            margin: 0;
+                        }
+
+                        .recentItemDownBlockLink {
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 19px;
+                            padding: 6px 12px;
+                            border: 1px solid $davysGrey;
+                            border-radius: 4px;
+                            margin-right: 5px;
+
+                            @include tablet {
+                                padding: 3px 9px;
+                                font-size: 10px;
+                            }
+
+                            &:hover {
+                                background: $champagne;
+                            }
+                        }
+                    }
+
+                    .recentItemDownBlockHosted {
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                        flex: 1;
+
+                        @include tablet510 {
+                            margin: 0;
+                            justify-content: start;
+                        }
+
+                        .recentItemDownBlockHostedText {
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 19px;
+                        }
+
+                        .recentItemDownBlockHostedImages {
+                            display: flex;
+
+                            .recentItemDownBlockHostedImg1 {
+                                position: relative;
+                                left: 10px;
+                                z-index: 1;
+                            }
+
+                            .recentItemDownBlockHostedImg2 {
+                                position: relative;
+                                z-index: 10000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .recentBtn {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-basis: 62px;
+
+            .recentButton {
+                padding: 20px 36px;
+                border: 2px solid $black;
+                border-radius: 8px;
+                background: $black;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 22px;
+                color: $white;
+                box-shadow: 6px 6px rgba(#000000, 0.25);
+
+                &:hover {
+                    color: $black;
+                    background: $vermillion;
+                }
+
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
