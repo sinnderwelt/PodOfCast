@@ -1,0 +1,366 @@
+.edgeFooter {
+    height: 618px;
+
+    @include tablet510 {
+        height: 818px;
+    }
+
+    .mainFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 398px;
+        padding-top: 60px;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        @include tablet510 {
+            height: 678px;
+        }
+
+        @include phones {
+            text-align: center;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 222px;
+
+            @include tablet {
+                flex-basis: 302px;
+                flex-wrap: wrap;
+            }
+
+            @include tablet510 {
+                flex-basis: 574px;
+                align-content: space-between;
+            }
+
+            .footerIntroduce {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                flex-basis: 275px;
+
+                @include tablet {
+                    flex-basis: calc(50% - 10px);
+                }
+
+                @include tablet510 {
+                    height: 200px;
+                    flex: 2 1 auto;
+                }
+
+                @include phones {
+                    height: 175px;
+                }
+
+                .footerIntroduceLogo {
+                    display: flex;
+                    align-items: end;
+                    flex-basis: 74px;
+
+                    @include phones {
+                        justify-content: space-around;
+                    }
+
+                    .footerIntroduceLogoYear {
+                        font-size: 12px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        color: $davysGrey;
+                        margin-left: 25px;
+                    }
+                }
+
+                .footerIntroduceText {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    color: $davysGrey;
+                    flex-basis: 44px;
+
+                    @include tablet510 {
+                        flex-basis: 20px;
+                        font-size: 16px;
+                    }
+                }
+
+                .footerIntroduceLink {
+                    display: flex;
+                    flex-basis: 24px;
+
+                    @include phones {
+                        justify-content: space-around;
+                    }
+
+                    .footerIntroduceItem {
+                        margin-right: 25px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+
+                        .footerIntroduceItemLink {
+                            height: 24px;
+                            width: 24px;
+
+                            #footerIntroduceItemLinkIcon {
+                                height: 24px;
+                                width: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footerList {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-basis: 270px;
+                height: 100px;
+
+                @include tablet {
+                    width: 100%;
+                    flex-direction: row;
+                    flex: 2 1 auto;
+                    order: -1;
+                    max-height: 25px;
+                }
+
+                @include tablet510 {
+                    border-bottom: 1px solid $black;
+                    max-height: 45px;
+                }
+
+                @include phones {
+                    max-height: 188px;
+                }
+
+                .footerItem {
+                    flex-basis: 26px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 25px;
+
+                    @include tablet {
+                        flex-basis: auto;
+                    }
+
+                    &:nth-child(2), &:nth-child(4) {
+                        color: $vermillion;
+                    }
+
+                    &:nth-last-child(-n+3) {
+                        padding-left: 90px;
+
+                        @include tablet {
+                            padding: 0;
+                        }
+                    }
+
+                    @include tablet510 {
+                        font-size: 18px;
+                    }
+
+                    @include phones {
+                        flex: 1 1 50%;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .footerInterest {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-basis: 373px;
+
+                @include tablet {
+                    flex-basis: calc(50% - 10px);
+                }
+
+                @include tablet510 {
+                    flex: 2 1 auto;
+                    height: 200px;
+                }
+
+                .footerInterestMusic {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    flex-basis: 77px;
+
+                    @include tablet510 {
+                        flex-basis: 60px;
+                    }
+
+                    @include phones {
+                        flex-basis: 85px;
+                    }
+
+                    .footerInterestMusicText {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 25px;
+                        color: $davysGrey;
+
+                        @include tablet510 {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .footerInterestMusicList {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 22px;
+
+                        @include phones {
+                            justify-content: space-around;
+                        }
+
+                        .footerInterestItemLink {
+                            width: 122px;
+                            height: 22px;
+
+                            #footerInterestItemLinkGoogle {
+                                width: 122px;
+                                height: 22px;
+                            }
+                        }
+
+                        .footerInterestItemLinkTwo {
+                            width: 80px;
+                            height: 22px;
+
+                            #footerInterestItemLinkSpotify {
+                                width: 80px;
+                                height: 22px;
+                            }
+                        }
+
+                        .footerInterestItemLinkThree {
+                            width: 94px;
+                            height: 22px;
+
+                            #footerInterestItemLinkYoutube {
+                                width: 94px;
+                                height: 22px;
+                            }
+                        }
+                    }
+                }
+
+                .footerInterestStore {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    flex-basis: 82px;
+
+                    @include tablet510 {
+                        flex-basis: 70px;
+                    }
+
+                    .footerInterestStoreText {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 25px;
+                        color: $davysGrey;
+
+                        @include tablet510 {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .footerInterestStoreList {
+                        display: flex;
+
+                        @include phones {
+                            justify-content: space-around;
+                        }
+
+                        .footerInterestStoreItem {
+                            margin-right: 20px;
+                            
+                            &:last-child {
+                                margin: 0;
+                            }
+
+                            .footerInterestStoreLink {
+                                width: 36px;
+                                height: 36px;
+    
+                                #footerInterestItemLink {
+                                    display: flex;
+                                    width: 36px;
+                                    height: 36px;
+
+                                    use {
+                                        transform: scale(0.9);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footerDescription {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            flex-basis: 19px;
+            border-top: 1px solid $davysGrey;
+
+            .footerDescriptionCopywrite {
+                display: flex;
+                flex-basis: 240px;
+
+                @include tablet510 {
+                    flex-basis: 340px;
+                }
+
+                .footerDescriptionCopywriteText {
+                    font-size: 12px;
+                    line-height: 19px;
+                    font-weight: 500;
+                    color: $davysGrey;
+                }
+
+                .footerDescriptionCopywriteColour {
+                    font-size: 12px;
+                    line-height: 19px;
+                    font-weight: 500;
+                    color: $vermillion;
+                }
+            }
+
+            .footerDescriptionPrivacy {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-basis: 109px;
+
+                .footerDescriptionPrivacyText {
+                    font-size: 12px;
+                    line-height: 19px;
+                    font-weight: 500;
+                    color: $davysGrey;
+                }
+
+                .footerDescriptionPrivacyDot {
+                    width: 2px;
+                    height: 2px;
+                    background-color: $davysGrey;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

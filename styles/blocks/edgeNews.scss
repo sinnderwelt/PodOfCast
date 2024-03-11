@@ -1,0 +1,334 @@
+.edgeNews {
+    height: 1303px;
+    position: relative;
+
+    @include tablet510 {
+        height: 1383px;
+    }
+
+    @include phones {
+        height: 1683px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 48%;
+        top: -75px;
+        background-image: url(./assets/images/talkDown.png);
+        background-size: 42px 150px;
+        width: 42px;
+        height: 150px;
+
+        @include tablet {
+            top: -55px;
+            background-size: 35px 110px;
+            width: 35px;
+            height: 110px;
+        }
+
+        @include phones {
+            right: 43%;
+        }
+    }
+
+    .mainNews {
+        height: 1023px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include tablet510 {
+            height: 1083px;
+        }
+
+        @include phones {
+            height: 1500px;
+        }
+
+        .newsHeader {
+            height: 127px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .newsHeaderText {
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 35px;
+
+                @include tablet {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .newsList {
+            position: relative;
+            height: 634px;
+            display: flex;
+            justify-content: space-between;
+
+            @include tablet510 {
+                height: 674px;
+                flex-direction: column;
+            }
+
+            @include phones {
+                height: 1200px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -80px;
+                top: -70px;
+                background-image: url(./assets/images/cross.png);
+                background-size: 166px 165px;
+                width: 166px;
+                height: 165px;
+
+                @include tablet {
+                    background-size: 83px 82px;
+                    width: 83px;
+                    height: 82px;
+                    left: -30px;
+                    top: -35px;
+                }
+
+                @include phones {
+                    display: none;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                transform: scale(-1, -1);
+                transform: rotate(125deg);
+                right: -85px;
+                bottom: -60px;
+                background-image: url(./assets/images/zagagulja.png);
+                background-size: 155px 88px;
+                width: 155px;
+                height: 88px;
+
+                @include tablet {
+                    background-size: 108px 61px; //124 70
+                    width: 108px;
+                    height: 61px;
+                    right: -40px;
+                    bottom: -50px;
+                }
+
+                @include tablet510 {
+                    background-size: 86px 48px;
+                    width: 86px;
+                    height: 48px;
+                    bottom: -35px;
+                }
+
+                @include phones {
+                    display: none;
+                }
+            }
+
+            .newsItem {
+                flex-basis: calc(50% - 10px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 15px;
+                background: $white;
+                border: 2px solid $black;
+                border-radius: 8px;
+                box-shadow: 6px 6px rgba(#000000, 1);
+                z-index: 10000;
+
+                &:last-child {
+                    box-shadow: none;
+                }
+
+                @include tablet510 {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+
+                @include phones {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+
+                .newsItemImage {
+                    position: relative;
+                    flex-basis: 320px;
+
+                    @include tablet {
+                        flex-basis: 280px;
+                    }
+
+                    @include tablet510 {
+                        flex: 1 1 40%;
+                    }
+
+                    .newsItemImg {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 8px;
+
+                        @include tablet510 {
+                            padding-bottom: 50px;
+                            padding-right: 20px;
+                        }
+
+                        @include phones {
+                            padding: 0;
+                        }
+                    }
+                }
+
+                .newsItemAbout {
+                    flex-basis: 165px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    @include tablet {
+                        flex-basis: 215px;
+                    }
+
+                    @include tablet510 {
+                        flex: 1 1 60%;
+                        margin-bottom: 50px;
+                    }
+
+                    @include phones {
+                        justify-content: space-evenly;
+                        margin: 0;
+                    }
+
+                    .newsItemAboutIntroduction {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 22px;
+                        color: $davysGrey;
+                        text-transform: uppercase;
+
+                        @include tablet {
+                            font-size: 13px;
+                        }
+                    } 
+
+                    .newsItemAboutHeaderPop {
+                        color: $vermillion;
+                        line-height: 40px;
+                    }
+
+                    .newsItemAboutText {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px;
+                        color: $davysGrey;
+
+                        @include tablet {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .newsItemLinks {
+                    position: relative;
+                    flex-basis: 31px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include tablet510 {
+                        flex: 2 1 auto;
+                    }
+
+                    .newsItemLinksTag {
+                        display: flex;
+                        align-items: center;
+
+                        .newsItemTag {
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 19px;
+                            padding: 6px 12px;
+                            border: 1px solid $davysGrey;
+                            border-radius: 4px;
+                            margin-right: 5px;
+
+                            &:last-child {
+                                margin: 0;
+                            }
+
+                            &:hover {
+                                background: $champagne;
+                            }
+
+                            @include tablet {
+                                font-size: 10px;
+                            }
+
+                            @include phones {
+                                padding: 3px 6px;
+                            }
+                        }
+                    }
+
+                    .newsItemLinksData {
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 19px;
+
+                        @include tablet {
+                            font-size: 10px;
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        top: -20px;
+                        border-top: 1px solid rebeccapurple;
+                    }
+                }
+            }
+        }
+        .newsBtn {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-basis: 62px;
+
+            .newsButton {
+                padding: 20px 36px;
+                border: 2px solid $black;
+                border-radius: 8px;
+                background: $black;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 22px;
+                color: $white;
+                box-shadow: 6px 6px rgba(#000000, 0.25);
+
+                &:hover {
+                    color: $black;
+                    background: $vermillion;
+                }
+
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

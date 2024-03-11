@@ -56,6 +56,18 @@ h3 {
     font-size: 36px;
     font-weight: 700;
     line-height: 51px;
+
+    @include tablet {
+        font-size: 32px;
+    }
+
+    @include tablet510 {
+        font-size: 28px;
+    }
+
+    @include phones {
+        font-size: 24px;
+    }
 }
 
 h4 {

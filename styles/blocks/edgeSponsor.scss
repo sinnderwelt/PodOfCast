@@ -1,29 +1,394 @@
 .edgeSponsor {
+    position: relative;
     height: 1196px;
-    background: plum;
+
+    @include tablet510 {
+        height: 1500px;
+    }
+
+    @include phones {
+        height: 2250px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 48%;
+        top: -75px;
+        background-image: url(./assets/images/talkDown.png);
+        background-size: 42px 150px;
+        width: 42px;
+        height: 150px;
+
+        @include tablet {
+            top: -55px;
+            background-size: 35px 110px;
+            width: 35px;
+            height: 110px;
+        }
+
+        @include phones {
+            right: 43%;
+        }
+    }
 
     .mainSponsor {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 916px;
-        background: violet;
+
+        @include tablet510 {
+            height: 1200px;
+        }
+
+        @include phones {
+            height: 2050px;
+        }
 
         .sponsorHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             flex-basis: 127px;
-            background: floralwhite;
+
+            @include phones {
+                justify-content: space-evenly;
+            }
+
+            .sponsorHeaderAfter {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-image: url(./assets/images/palo4ki.png);
+                    background-size: 62px 60px;
+                    width: 62px;
+                    height: 60px;
+                    transform: scale(-1, 1);
+                    left: -40px;
+                    top: -30px;
+
+                    @include phones {
+                        display: none;
+                    }
+                }
+            }
+
+            .sponsorHeaderText {
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 36px;
+
+                @include tablet {
+                    font-size: 18px;
+                }
+
+                @include tablet510 {
+                    font-size: 16px;
+                }
+            }
         }
 
         .sponsorList {
             display: flex;
+            position: relative;
             justify-content: space-between;
             flex-basis: 689px;
-            background: forestgreen;
+
+            @include tablet510 {
+                flex-direction: column;
+                flex-basis: 1000px;
+            }
+
+            @include phones {
+                height: 2000px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                background-image: url(./assets/images/vector5.png);
+                width: 100px;
+                height: 100px;
+                background-size: 100px 100px;
+                bottom: -40px;
+                left: -60px;
+
+                @include tablet {
+                    width: 70px;
+                    height: 70px;
+                    background-size: 70px 70px;
+                    bottom: -25px;
+                    left: -40px;
+                }
+
+                @include phones {
+                    display: none;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url(./assets/images/star4.png);
+                width: 100px;
+                height: 100px;
+                background-size: 100px 100px;
+                top: -45px;
+                right: -45px;
+
+                @include tablet {
+                    width: 70px;
+                    height: 70px;
+                    background-size: 70px 70px;
+                    top: -30px;
+                    right: -25px;
+                }
+
+                @include phones {
+                    display: none;
+                }
+            }
 
             .sponsorItem {
-                flex-basis: 373px;
-                background: lightsalmon;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-basis: calc(33.33% - 10px);
+                border-radius: 8px;
                 height: 100%;
+                z-index: 10000;
+
+                @include tablet510 {
+                    flex-direction: row;
+                }
+
+                @include phones {
+                    flex-direction: column;
+                }
+
+                .sponsorItemSubscribe {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 60px 40px 30px 40px;
+                    flex-basis: 357px;
+                    border: 1px solid $black;
+                    border-radius: 8px;
+                    background: $white;
+
+                    @include tablet {
+                        padding: 30px 20px 20px 20px;
+                    }
+
+                    @include tablet510 {
+                        flex: 1;
+                    }
+
+                    @include phones {
+                        margin-bottom: 10px;
+                    }
+
+                    .sponsorItemSubscribeAbout {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        flex-basis: 115px;
+
+                        @include tablet {
+                            flex-basis: 155px;
+                        }
+
+                        .sponsorItemSubscribeAboutText {
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 22px;
+
+                            @include tablet {
+                                font-size: 13px;
+                            }
+
+                            @include phones {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .sponsorItemSubscribePrice {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-basis: 62px;
+
+                        @include tablet {
+                            flex-direction: column-reverse;
+                        }
+
+                        .sponsorItemSubscribePriceButton {
+                            padding: 20px 36px;
+                            border: 2px solid $black;
+                            border-radius: 8px;
+                            background: $black;
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 22px;
+                            color: $white;
+                            box-shadow: 6px 6px rgba(#000000, 0.25);
+
+                            &:hover {
+                                color: $black;
+                                background: $vermillion;
+                            }
+
+                            @include tablet {
+                                text-align: center;
+                                padding: 15px 21px;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .sponsorItemSubscribePriceMoney {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-basis: 62px;
+
+                            @include tablet {
+                                flex-direction: row;
+                                align-items: center;
+                            }
+
+                            .sponsorItemSubscribePriceMoneyValue {
+                                font-size: 22px;
+                                font-weight: 700;
+                                line-height: 31px;
+                                color: $vermillion;
+                            }
+
+                            .sponsorItemSubscribePriceMoneyMonth {
+                                font-size: 14px;
+                                font-weight: 700;
+                                line-height: 22px;
+                                color: $davysGrey;
+                            }
+                        }
+                    }
+                }
+
+                .sponsorItemSubscribePop {
+                    position: relative;
+                    background: $champagne;
+                    border-color: $vermillion;
+
+                    &::before {
+                        content: "most popular";
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 4px;
+                        text-transform: uppercase;
+                        height: 25px;
+                        width: 120px;
+                        top: 73px;
+                        right: 30px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        background: $vermillion;
+                        color: $white;
+
+                        @include tablet {
+                            top: 85px;
+                            right: 0;
+                            left: 20px;
+                        }
+                    }
+                }
+
+                .sponsorItemInclude {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 312px;
+                    padding: 35px;
+                    border: 1px solid $black;
+                    border-radius: 8px;
+                    background: $white;
+
+                    @include tablet {
+                        padding: 20px;
+                    }
+
+                    @include tablet510 {
+                        margin-left: 10px;
+                        flex: 1;
+                        justify-content: center
+                    }
+
+                    @include phones {
+                        margin-left: 0;
+                        margin-bottom: 40px;
+                    }
+
+                    .sponsorItemIncludeText {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 22px;
+                        color: $davysGrey;
+                        margin-bottom: 20px;
+
+                        @include tablet {
+                            font-size: 13px;
+                        }
+
+                        @include phones {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .sponsorItemIncludeList {
+                        flex-basis: 134px;
+                        list-style-type: none;
+
+                        .sponsorItemIncludeItem {
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 25px;
+                            margin-bottom: 10px;
+                            color: $black;
+
+                            &:last-child {
+                                margin: 0;
+                            }
+
+                            &::before {
+                                content: '\2022';   // Символ \2022 в юникоде представляет собой символ "BULLET" (точка)
+                                color: $black;       
+                                font-size: 20px;      
+                                margin-right: 5px;
+                            }
+
+                            @include tablet {
+                                font-size: 13px;
+                            }
+                            
+                            @include phones {
+                                font-size: 16px;
+                            }
+                        }
+
+                        .sponsorItemIncludeItemBold {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .sponsorItemIncludePop {
+                    background: $champagne;
+                    border-color: $vermillion;
+                }
             }
         }
     }

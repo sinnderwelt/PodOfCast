@@ -39,24 +39,24 @@
                     content: "";
                     position: absolute;
                     background-image: url(./assets/images/zagagulja.png);
-                    background-size: 195px 92px;
+                    background-size: 195px 111px;
                     width: 195px;
-                    height: 92px;
+                    height: 111px;
                     top: -65px;
-                    right: -70px;
+                    right: -75px;
 
                     @include tablet {
-                        background-size: 150px 85px;
-                        width: 150px;
+                        background-size: 135px 85px;
+                        width: 135px;
                         height: 85px;
                         top: -50px;
-                        right: -50px;
+                        right: -60px;
                     }
 
                     @include tablet510 {
-                        background-size: 130px 65px;
-                        width: 130px;
-                        height: 65px;
+                        background-size: 108px 67px;
+                        width: 108px;
+                        height: 67px;
                         top: -40px;
                         right: -40px;
                     }
@@ -123,6 +123,15 @@
                 .membershipItemImg {
                     flex-basis: 108px;
                     text-align: center;
+
+                    .membershipItemImgSize {
+                        max-width: 79px;
+                        height: 78px;
+                    }
+
+                    .membershipItemImgRotate {
+                        transform: rotate(-23deg);
+                    }
                 }
 
                 .membershipItemContent {

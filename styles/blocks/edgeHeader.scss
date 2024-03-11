@@ -1,0 +1,50 @@
+.edgeHeader {
+    height: 1448px;
+    background: thistle;
+
+    .mainHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1284px;
+        padding-top: 24px;
+        background: plum;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 74px;
+            background: pink;
+
+            .headerLogo {
+                flex-basis: 74px;
+                background: palegreen;
+            }
+
+            .headerList {
+                flex-basis: 315px;
+                background: paleturquoise;
+            }
+
+            .headerButton {
+                flex-basis: 344px;
+                background: papayawhip;
+            }
+        }
+
+        .headerContent {
+            flex-basis: 409px;
+            background: peachpuff;
+        }
+
+        .headerAttraction {
+            flex-basis: 373px;
+            background: paleturquoise;
+        }
+
+        .headerSupported {
+            flex-basis: 124px;
+            background: powderblue;
+        }
+    }
+}

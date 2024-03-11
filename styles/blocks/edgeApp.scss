@@ -1,0 +1,265 @@
+.edgeApp {
+    height: 816px;
+    position: relative;
+    background: $aliceBlue;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(./assets/images/sparkle.png);
+        background-size: calc(120px * 0.6) calc(150px * 0.6);
+        width: calc(120px * 0.6);
+        height: calc(150px * 0.6);
+        top: 385px;
+        left: 125px;
+
+        @include tablet {
+            background-size: calc(120px * 0.5) calc(150px * 0.5);
+            width: calc(120px * 0.5);
+            height: calc(150px * 0.5);
+            top: 425px;
+            left: 115px;
+        }
+
+        @include tablet510 {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url(./assets/images/sparkle.png);
+        background-size: calc(120px * 0.9) calc(150px * 0.9);
+        width: calc(120px * 0.9);
+        height: calc(150px * 0.9);
+        top: 400px;
+        left: 10px;
+
+        @include tablet {
+            background-size: calc(120px * 0.8) calc(150px * 0.8);
+            width: calc(120px * 0.8);
+            height: calc(150px * 0.8);
+            top: 435px;
+            left: 5px;
+        }
+
+        @include tablet510 {
+            display: none;
+        }
+    }
+
+    .edgeAppSparkleThree {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            position: absolute;
+            background-image: url(./assets/images/sparkle.png);
+            background-size: calc(120px * 0.3) calc(150px * 0.3);
+            width: calc(120px * 0.3);
+            height: calc(150px * 0.3);
+            top: 330px;
+            left: 100px;
+
+            @include tablet {
+                background-size: calc(120px * 0.2) calc(150px * 0.2);
+                width: calc(120px * 0.2);
+                height: calc(150px * 0.2);
+                top: 395px;
+                left: 85px;
+            }
+
+            @include tablet510 {
+                display: none;
+            }
+        }
+    }
+
+    .edgeAppImgLeft {
+        max-width: 373px;
+        position: absolute;
+        bottom: 0;
+
+        @include tablet {
+            width: calc(373px * 0.9);
+        }
+
+        @include tablet510 {
+            display: none;
+        }
+    }
+
+    .edgeAppImgRight {
+        max-width: 373px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @include tablet {
+            width: calc(373px * 0.8);
+        }
+
+        @include tablet510 {
+            display: none;
+        }
+    }
+
+    .mainApp {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 536px;
+
+        .appContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 254px;
+
+            @include phones {
+                justify-content: space-around;
+            }
+
+            .appContentTag {
+                position: relative;
+                padding: 3px 6px;
+                border: 1px solid $vermillion;
+                border-radius: 4px;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $vermillion;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -25px;
+                    bottom: 95px;
+                    background-image: url(./assets/images/talkUp.png);
+                    background-size: 135px 150px;
+                    width: 100px;
+                    height: 150px;
+            
+                    @include tablet {
+                        bottom: 100px;
+                        background-size: calc(135px * 0.9) calc(150px * 0.9);
+                        width: calc(135px * 0.9);
+                        height: calc(150px * 0.9);
+                    }
+
+                    @include phones {
+                        bottom: 120px;
+                    }
+                }
+            }
+
+            .appContentHeader {
+                text-align: center;
+                padding: 0 300px;
+
+                @include tablet {
+                    padding: 0;
+                    width: 400px;
+                }
+
+                @include tablet510 {
+                    width: 400px;
+                }
+
+                @include phones {
+                    width: 250px;
+                }
+            }
+
+            .appContentText {
+                font-size: 22px;
+                line-height: 36px;
+                color: $davysGrey;
+
+                @include tablet {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .appAvailable {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 142px;
+
+            .appAvailableButton {
+                position: relative;
+                padding: 20px 36px;
+                border: 2px solid $black;
+                border-radius: 8px;
+                background: $black;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 22px;
+                color: $white;
+                box-shadow: 6px 6px rgba(#000000, 0.25);
+
+                &:hover {
+                    color: $black;
+                    background: $vermillion;
+                }
+
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -55px;
+                    right: -55px;
+                    background-image: url(./assets/images/palo4ki.png);
+                    background-size: 75px 65px;
+                    width: 75px;
+                    height: 65px;
+                }
+            }
+
+            .appAvailableContent {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-basis: 56px;
+
+                .appAvailableContentText {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    color: $davysGrey;
+                }
+
+                .appAvailableContentSocial {
+                    flex-basis: 24px;
+
+                    .appAvailableContentNetwork {
+                        display: flex;
+                        justify-content: space-evenly;
+
+                        .appAvailableContentNetworkLink {
+                            height: 24px;
+                            width: 24px;
+
+                            #appAvailableContentNetworkLinkIcon {
+                                height: 24px;
+                                width: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
