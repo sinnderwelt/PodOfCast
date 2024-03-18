@@ -26,8 +26,16 @@ h1 {
     font-weight: 700;
     line-height: 96px;
 
+    @include tablet {
+        font-size: 80px;
+    }
+
+    @include tablet510 {
+        font-size: 64px;
+    }
+
       @include phones {
-        font-size: 28px;
+        font-size: 54px;
     }
 }
 

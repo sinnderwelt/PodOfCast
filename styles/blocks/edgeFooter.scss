@@ -144,16 +144,9 @@
 
                 .footerItem {
                     flex-basis: 26px;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 25px;
-
+ 
                     @include tablet {
                         flex-basis: auto;
-                    }
-
-                    &:nth-child(2), &:nth-child(4) {
-                        color: $vermillion;
                     }
 
                     &:nth-last-child(-n+3) {
@@ -171,6 +164,24 @@
                     @include phones {
                         flex: 1 1 50%;
                         text-align: center;
+                    }
+                    
+                    .footerItemLink {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 25px;
+    
+                        &:hover {
+                            color: $vermillion;
+                        }
+                    }
+
+                    .footerItemLinkColor {
+                        color: $vermillion;
+
+                        &:hover {
+                            color: $black;
+                        }
                     }
                 }
             }

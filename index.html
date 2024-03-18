@@ -11,20 +11,68 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- <section class="edgeHeader"> 
+        <section class="edgeHeader"> 
             <div class="container">
                 <div class="mainHeader">
                     <header>
-                        <div class="headerLogo">4523</div>
-                        <div class="headerList">gdsfg</div>
-                        <div class="headerButton">vcx</div>
+                        <div class="headerLogo">
+                            <a href="#">
+                                <img src="./assets/images/logo.png" alt="headerLogo">
+                            </a>
+                        </div>
+                        <ul class="headerList">
+                            <li class="headerItem">
+                                <a class="headerItemLink" href="#">Episodes</a>
+                            </li>
+                            <li class="headerItem">
+                                <a class="headerItemLink" href="#">About</a>
+                            </li>
+                            <li class="headerItem">
+                                <a class="headerItemLink" href="#">More</a>
+                            </li>
+                        </ul>
+                        <div class="headerButton">
+                            <a href="#" class="headerButtonRecent">Recent Episodes</a>
+                            <a href="#" class="headerButtonSubscribe">Subscribe</a>
+                        </div>
                     </header>
-                    <div class="headerContent">dsa</div>
-                    <div class="headerAttraction">53</div>
-                    <div class="headerSupported">hgf</div>
+                    <div class="headerContent">
+                        <h1>Your Daily <span>Podcast</span></h1>
+                        <p class="headerContentText">We cover all kinds of categories and a weekly special guest.</p>
+                        <a class="headerContentButton" href="#">Subscribe</a>
+                    </div>
+                    <!-- В будущем тут будет JS -->
+                    <div class="headerAttraction">Attraction</div>
+                    <!-- Там. Выше :) -->
+                    <div class="headerSupported">
+                        <p class="headerSupportedText">Supported by:</p>
+                        <ul class="headerSupportedList">
+                            <li class="headerSupportedItem">
+                                <a class="headerSupportedItemLink" href="/">
+                                    <svg id="headerSupportedItemLinkSpotify">
+                                        <use xlink:href="./assets/icons/sprite.svg#spotifyColour"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="headerSupportedItem">
+                                <a class="headerSupportedItemLinkTwo" href="/">
+                                    <svg id="headerSupportedItemLinkGoogle">
+                                        <use xlink:href="./assets/icons/sprite.svg#googleColour"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="headerSupportedItem">
+                                <a class="headerSupportedItemLinkThree" href="/">
+                                    <svg id="headerSupportedItemLinkYoutube">
+                                        <use xlink:href="./assets/icons/sprite.svg#youtubeColour"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>  
             </div>
-        </section> -->
+        </section>
         <section class="edgeTalk"> 
             <div class="container containerFlex">
                 <div class="mainTalk">
@@ -480,7 +528,9 @@
                     <footer>
                         <div class="footerIntroduce">
                             <div class="footerIntroduceLogo">
-                                <img class="footerIntroduceLogoImg" src="./assets/images/logo.png" alt="logo">
+                                <a href="#">
+                                    <img src="./assets/images/logo.png" alt="logo">
+                                </a>
                                 <p class="footerIntroduceLogoYear">©2021.</p>
                             </div>
                             <p class="footerIntroduceText">
@@ -511,12 +561,24 @@
                             </ul>
                         </div>
                         <ul class="footerList">
-                            <li class="footerItem">About</li>
-                            <li class="footerItem">Testimonial</li>
-                            <li class="footerItem">Features</li>
-                            <li class="footerItem">Episodes</li>
-                            <li class="footerItem">Pricing</li>
-                            <li class="footerItem">Blog</li>
+                            <li class="footerItem">
+                                <a class="footerItemLink" href="#">About</a>
+                            </li>
+                            <li class="footerItem">
+                                <a class="footerItemLink footerItemLinkColor" href="#">Testimonial</a>
+                            </li>
+                            <li class="footerItem">
+                                <a class="footerItemLink" href="#">Features</a>
+                            </li>
+                            <li class="footerItem">
+                                <a class="footerItemLink footerItemLinkColor" href="#">Episodes</a>
+                            </li>
+                            <li class="footerItem">
+                                <a class="footerItemLink" href="#">Pricing</a>
+                            </li>
+                            <li class="footerItem">
+                                <a class="footerItemLink" href="#">Blog</a>
+                            </li>
                         </ul>
                         <div class="footerInterest">
                             <div class="footerInterestMusic">
@@ -572,9 +634,9 @@
                             <p class="footerDescriptionCopywriteColour">Pod of Cast</p>
                         </div>
                         <div class="footerDescriptionPrivacy">
-                            <a class="footerDescriptionPrivacyText">Terms</a>
+                            <a href="#" class="footerDescriptionPrivacyText">Terms</a>
                             <div class="footerDescriptionPrivacyDot"></div>
-                            <a class="footerDescriptionPrivacyText">Privacy</a>
+                            <a href="#" class="footerDescriptionPrivacyText">Privacy</a>
                         </div>
                     </div>
                 </div>

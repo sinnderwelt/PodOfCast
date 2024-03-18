@@ -1,6 +1,48 @@
 .edgeHeader {
+    position: relative;
     height: 1448px;
-    background: thistle;
+    background: $champagne;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 593px;
+        width: 326px;
+        background-image: url(./assets/images/headerBzik.png);
+        top: 7%;
+
+        @include tablet {
+            background-size: calc(326px * 0.7) calc(593px * 0.7);
+            width: calc(326px * 0.7);
+            height: calc(593px * 0.7);
+            top: 13%;
+        }
+
+        @include tablet510 {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 216px;
+        width: 155px;
+        background-image: url(./assets/images/headerStars.png);
+        top: 19%;
+        right: 6%;
+
+        @include tablet {
+            background-size: calc(155px * 0.7) calc(216px * 0.7);
+            width: calc(155px * 0.7);
+            height: calc(216px * 0.7);
+            top: 20%;
+        }
+
+        @include tablet510 {
+            display: none;
+        }
+    }
 
     .mainHeader {
         display: flex;
@@ -8,43 +50,342 @@
         justify-content: space-between;
         height: 1284px;
         padding-top: 24px;
-        background: plum;
+
+        @include phones {
+            height: 1380px;
+        }
 
         header {
             display: flex;
             justify-content: space-between;
             flex-basis: 74px;
-            background: pink;
+
+            @include tablet510 {
+                flex-direction: column;
+                flex-basis: 234px;
+            }
 
             .headerLogo {
                 flex-basis: 74px;
-                background: palegreen;
+
+                @include tablet510 {
+                    text-align: center;
+                    flex: 1;
+                }
             }
 
             .headerList {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 flex-basis: 315px;
-                background: paleturquoise;
+
+                @include tablet510 {
+                    flex: 1;
+                    justify-content: space-around;
+                    order: 3;
+                }
+
+                @include phones {
+                    justify-content: space-evenly;
+                }
+
+                .headerItem {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 25px;
+
+                    @include tablet510 {
+                        font-size: 14px;
+                    }
+
+                    @include phones {
+                        font-size: 16px;
+                    }
+
+                    .headerItemLink {
+                        &:hover {
+                            color: $vermillion;
+                        }
+                    }
+
+                    &:last-child {
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 9px;
+                            width: 2px;
+                            height: 7px;
+                            background-color: $black;
+                            right: -18px;
+                            transform: rotate(45deg);
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 9px; 
+                            width: 2px; 
+                            height: 7px; 
+                            background-color: $black; 
+                            right: -14px; 
+                            transform: rotate(-45deg); 
+                        }
+                        
+                        .headerItemLink {
+                            position: relative;
+
+                            &:hover {
+                                color: $vermillion;
+                            }
+
+                            &:hover::after {
+                                border-color: $vermillion; 
+                              }
+                            
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 16px;
+                                height: 16px;
+                                border: 2px solid rgba(0, 0, 0, 0.3);
+                                border-radius: 50%;
+                                top: 0;
+                                right: -25px;
+                            }
+                        }
+                    }
+                }
             }
 
             .headerButton {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 flex-basis: 344px;
-                background: papayawhip;
+
+                @include tablet510 {
+                    justify-content: space-evenly;
+                    flex: 1;
+                }
+
+                .headerButtonRecent {
+                    color: $black;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                    padding: 12px 24px;
+                    border: 2px solid $black;
+                    border-radius: 8px;
+
+                    &:hover {
+                        color: $vermillion;
+                        border: 2px solid $vermillion;
+                    }
+    
+                    @include tablet {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                }
+
+                .headerButtonSubscribe {
+                    background: $black;
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                    padding: 12px 24px;
+                    border: 2px solid $black;
+                    border-radius: 8px;
+                    box-shadow: 0 0.275rem rgba(0, 0, 0, 0.25);
+
+                    &:hover {
+                        color: $black;
+                        background: $vermillion;
+                    }
+    
+                    @include tablet {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                }
             }
         }
 
         .headerContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
             flex-basis: 409px;
-            background: peachpuff;
+            margin: 0 auto;
+            width: 55%;
+
+            @include tablet {
+                width: 75%;
+            }
+
+            @include phones {
+                width: 100%;
+            }
+
+            span {
+                color: $vermillion;
+            }
+
+            .headerContentText {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 25px;
+                color: $davysGrey;
+                margin: 0 auto;
+                width: 48%;
+
+                @include tablet510 {
+                    font-size: 14px;
+                    width: 67%;
+                }
+
+                @include phones {
+                    font-size: 16px;
+                    width: 90%;
+                }
+            }
+
+            .headerContentButton {
+                padding: 20px 36px;
+                border: 2px solid $black;
+                border-radius: 8px;
+                background: $black;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 22px;
+                color: $white;
+                box-shadow: 6px 6px rgba(#000000, 0.25);
+
+                &:hover {
+                    color: $black;
+                    background: $vermillion;
+                }
+
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
         }
 
         .headerAttraction {
             flex-basis: 373px;
-            background: paleturquoise;
         }
 
         .headerSupported {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-basis: 124px;
-            background: powderblue;
+            border-top: 1px solid $black;
+            border-bottom: 1px solid $black;
+
+            @include tablet510 {
+                flex-direction: column;
+                flex-basis: 76px;
+            }
+
+            @include phones {
+                flex-basis: 204px;
+            }
+
+            .headerSupportedText {
+                font-size: 23px;
+                line-height: 32px;
+                font-weight: 700;
+                color: $black;
+
+                @include tablet {
+                    font-size: 18px;
+                }
+            }
+
+            .headerSupportedList {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-basis: 865px;
+
+                @include tablet510 {
+                    flex: 1;
+                    align-items: flex-end;
+                }
+
+                @include phones {
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                .headerSupportedItem {
+
+                    @include tablet510 {
+                        margin-right: 30px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+
+                    @include phones {
+                        margin: 0;
+                    }
+
+                    .headerSupportedItemLink {
+                        width: 128px;
+                        height: 34px;
+        
+                        #headerSupportedItemLinkSpotify {
+                            width: 128px;
+                            height: 34px;
+    
+                            @include tablet {
+                            background-size: calc(128px * 0.9) calc(34px * 0.9);
+                            width: calc(128px * 0.9);
+                            height: calc(34px * 0.9);
+                            }
+                        }
+                    }
+        
+                    .headerSupportedItemLinkTwo {
+                        width: 196px;
+                        height: 34px;
+        
+                        #headerSupportedItemLinkGoogle {
+                            width: 196px;
+                            height: 34px;
+                        }
+                    }
+        
+                    .headerSupportedItemLinkThree {
+                        width: 124px;
+                        height: 34px;
+        
+                        #headerSupportedItemLinkYoutube {
+                            width: 124px;
+                            height: 34px;
+    
+                            @include tablet {
+                                background-size: calc(128px * 0.9) calc(34px * 0.9);
+                                width: calc(128px * 0.9);
+                                height: calc(34px * 0.9);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
